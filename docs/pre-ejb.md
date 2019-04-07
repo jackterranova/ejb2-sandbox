@@ -19,4 +19,4 @@ As the power of centralized application systems became apparent, the need for in
 
 CORBA allowed objects (even those written in different languages) to run interoperably on different machines.   Years-old legacy objects could be packaged as CORBA services and run in more modern systems.
 
-==> Enter EJBs(./ejb-background.md) - interoperable Java components that were compatible with CORBA.
+==> Enter [EJBs](./ejb-background.md) - interoperable Java components that were compatible with CORBA.
