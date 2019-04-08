@@ -10,9 +10,9 @@ It not only gives us an appreciation of modern cloud computing but more importan
 ### Background
 To work with EJBs you'll need a compliant container.  As awesome as Tomcat is, it doesn't fit the bill.
 
-You'll need something like Glassfish.
+You'll need something like Glassfish (or Websphere, or Weblogic or JBoss).
 
-Back in the heady days of EJB1/2 (late 90s to mid 2000s) you typically used an insanely heavy EE compliant container such as Websphere or Weblogic (don't miss those days of setting up those containers for local development).
+Back in the heady days of EJB1/2 (late 90s to mid 2000s) you typically used an insanely heavy EE compliant container such as JBoss, Websphere or Weblogic (I don't miss those days of setting up those containers for local development).
 
 In this example project, I wanted to use a container as close as possible to a typical EE environment of the time.  This would correspond to EJB2.1 (late 2003) Java 4(1.4)/5.  However, the first release of Glassfish was 2005 and that is no longer available (at least not from Oracle).
 
@@ -49,4 +49,4 @@ A good exercise might be to package the client code in its own jar file and run 
 
 But to get started quickly you can simply execute the main method in `EJBClient` (make sure your project is using the GF library in its classspath).
 
-
+[More details on EJB](./docs/pre-ejb.md)

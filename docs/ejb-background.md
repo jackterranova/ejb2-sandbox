@@ -13,6 +13,22 @@ With The advent of the JVM came the hope of simpler distibuted computing, thanks
 
 The EJB spec describes how to interface with client processes and other existing (even non-Java) systems, including compatibility with CORBA.  It defines specialized components in the enterprise system and was the first major and successful attempt to leverage Java as a way to create robust enterprise systems with a more defined separation of application concerns.
 
+### Couldn't you just write lighter weight apps that could run in Tomcat?  What does EJB do that Servlets/JSPs can't?
+
+The short answers are yes and nothing.
+
+The longer answers are more complicated and of course depends on what your application(s) needs were and how scalable you needed your services to be.
+
+EJB containers were intended to take on lower level tasks like concurrency, transactionality, security and scalability, allowing developers to focus on core business logic.
+
+As long as developers had to manage these concerns and were willing to do so in their own code (and there have always been Java frameworks to do so), a servlet engine like Tomcat would work fine.
+
+For example, if your application just requires some business logic and needs to talk to a database, then a servlet or 2 and some JDBC might work fine (with added coding around the JDBC connection pooling and transactions).  Using an EJB in such a scenario would likely be overkill despite the fact that the EJB container could handle db connection pools and transactions for you.
+
+As an application becomes more complex with more specialized components (e.g. dbs, message queues, concurrency, disctibuted tranaction maangement etc), the usefuleness of EJB quickly becomes apparent.
+
+A great and highly recommended article on this topic can be found here: https://www.javaworld.com/article/2077826/tomcat-in-the-enterprise.html.
+
 ### What has replaced EJBs
 
 One of the big drawbacks of EJB was its reliance on heavyweight containers like Websphere and Weblogic.  Writing EJBs had a direct dependency on the libraries provided by Java EE servers.
